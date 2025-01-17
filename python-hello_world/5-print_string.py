@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 str = "Holberton School"
-print(
+print(str * 3) # Adds a space after repetition
+print(str[:9])
