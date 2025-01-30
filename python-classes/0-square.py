@@ -3,6 +3,6 @@
 """creates a empty class Square"""
 
 class Square:
-    """Defines a empty class"""
+    """defines a empty class."""
 
     pass
