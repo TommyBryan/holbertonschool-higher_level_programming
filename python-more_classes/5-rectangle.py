@@ -19,7 +19,7 @@ class Rectangle:
     def width(self):
         """Get/set the width of the Rectangle."""
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -32,7 +32,7 @@ class Rectangle:
     def height(self):
         """Get/set the height of the Rectangle."""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
@@ -44,13 +44,13 @@ class Rectangle:
     def area(self):
         """Return the area of the Rectangle."""
         return self.__width * self.__height
-    
+
     def perimeter(self):
         """Return the perimeter of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
-    
+
     def __str__(self):
         """Return the printable representation of the Rectangle.
         Represents the rectangle with the # character.
@@ -58,11 +58,11 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
         return "\n".join(["#" * self.__width] * self.__height)
-    
+
     def __repr__(self):
         """Return the string representation of the Rectangle."""
         return "Rectangle({}, {})".format(self.__width, self.__height)
-    
+
     def __del__(self):
         """Print a message when a Rectangle instance is deleted."""
         print("Bye rectangle...")
