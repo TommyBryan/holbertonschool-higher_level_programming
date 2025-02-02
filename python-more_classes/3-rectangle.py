@@ -16,7 +16,7 @@ class Rectangle:
     def width(self):
         """ Retrieves the width """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -29,7 +29,7 @@ class Rectangle:
     def height(self):
         """ Retrieves the height """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
