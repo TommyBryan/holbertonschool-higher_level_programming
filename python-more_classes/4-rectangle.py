@@ -12,7 +12,7 @@ class Rectangle:
     def width(self):
         """ Retrieves the width """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -25,7 +25,7 @@ class Rectangle:
     def height(self):
         """ Retrieves the height """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
@@ -37,20 +37,19 @@ class Rectangle:
     def area(self):
         """ Returns the rectangle area """
         return self.__width * self.__height
-    
+
     def perimeter(self):
         """ Returns the rectangle perimeter """
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
-    
+
     def __str__(self):
         """ Returns the printable representation of the rectangle """
         if self.__width == 0 or self.__height == 0:
             return ""
         return (("#" * self.__width + "\n") * self.__height).rstrip()
-    
+
     def __repr__(self):
         """ Returns the string representation of the rectangle """
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-    
