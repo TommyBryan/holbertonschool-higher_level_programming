@@ -3,9 +3,14 @@
 
 
 class Rectangle:
-    def __init__(self, width=0, height=0):
-        """ Initializes the rectangle """
+    """Represents a rectangle"""
 
+    def __init__(self, width=0, height=0):
+        """ Initializes the rectangle.
+         Args:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
+        """
         self.__width = width
         self.__height = height
 
