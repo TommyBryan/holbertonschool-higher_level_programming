@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Module for creating an object from a JSON file and writing an object to a text file using JSON representation."""
+"""Module for creating an object from a JSON file
+and writing an object to a text file using JSON representation.
+"""
+
 
 import json
 
