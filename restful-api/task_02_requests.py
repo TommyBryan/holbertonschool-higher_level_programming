@@ -4,6 +4,7 @@
 import requests
 import csv
 
+
 def fetch_and_print_posts():
     """
     Fetches post from the JSONPlaceholder API and prints their titles.
@@ -25,6 +26,7 @@ def fetch_and_print_posts():
             print(post["title"])
     else:
         print("Failed to fetch posts.")
+
 
 def fetch_and_save_posts():
     """
