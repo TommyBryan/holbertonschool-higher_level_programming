@@ -26,7 +26,7 @@ def fetch_and_print_posts():
     else:
         print("Failed to fetch posts.")
 
-def fetch_and_save_post():
+def fetch_and_save_posts():
     """
     Fetches posts from the JSONPlaceholder API and saves them to a CSV file.
 
