@@ -47,9 +47,9 @@ def fetch_and_save_posts():
 
         with open("posts.csv", "w") as file:
             writer = csv.writer(file)
-            writer.writerow(["ID", "User ID", "Title", "Body"])
+            writer.writerow(["id", "title", "body"])
 
             for post in posts:
-                writer.writerow([post["id"], post["userId"], post["title"], post["body"]])
+                writer.writerow([post["id"], post["title"], post["body"]])
     else:
         print("Failed to fetch posts.")
