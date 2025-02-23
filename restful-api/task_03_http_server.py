@@ -1,4 +1,7 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/env python3
+"""
+Simple HTTP Server following the provided instructions.
+"""
 
 import http.server
 import json
@@ -6,24 +9,10 @@ from http import HTTPStatus
 
 
 class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
-    """
-    A simple HTTP server request handler.
-
-    This server handles basic GET requests and returns
-    different responses based on the requested path.
-    """
+    """Handles HTTP GET requests for a simple API."""
 
     def do_GET(self):
-        """
-        Handles GET requests and returns appropriate responses
-        based on the requested path.
-
-        - "/": Returns a plain text welcome message.
-        - "/data": Returns a JSON object with sample user data.
-        - "/status": Returns a JSON object indicating API status.
-        - "/info": Returns a JSON object with API information.
-        - Any other path: Returns a 404 JSON error message.
-        """
+        """Processes GET requests and returns appropriate responses."""
         if self.path == "/":
             self.send_response(HTTPStatus.OK)
             self.send_header("Content-Type", "text/plain")
