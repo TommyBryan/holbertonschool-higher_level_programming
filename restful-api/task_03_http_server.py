@@ -27,9 +27,9 @@ class MyHandler(BaseHTTPRequestHandler):
 
         elif self.path == '/status':
             self.send_response(200)
-            self.send_header('Content-Type', 'text/plain')
+            self.send_header('Content-Type', 'application/json')
             self.end_headers()
-            self.wfile.write(b"OK")
+            self.wfile.write(json.dumps({"status": "ok"}).encode('utf-8'))
 
         elif self.path == '/info':
             data = {"version": "1.0", "description": "A simple API built with http.server"}
@@ -44,12 +44,12 @@ class MyHandler(BaseHTTPRequestHandler):
 
         else:
             self.send_response(404)
-            self.send_header('Content-Type', 'application/json')  # Fixed: Return JSON instead of HTML
+            self.send_header('Content-Type', 'application/json')
             self.end_headers()
-            self.wfile.write(json.dumps({"error": "Not found"}).encode('utf-8'))  # Fixed: Ensure JSON error response
+            self.wfile.write(json.dumps({"error": "Endpoint not found"}).encode('utf-8'))  # 🔥 Fixed here!
 
 
-def run(server_class=HTTPServer, handler_class=MyHandler):  # Fixed: Correct handler assignment
+def run(server_class=HTTPServer, handler_class=MyHandler):
     """Runs the HTTP server."""
     server_address = ('', 8000)
     httpd = server_class(server_address, handler_class)
