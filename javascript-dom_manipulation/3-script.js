@@ -1,11 +1,11 @@
 addEventListener("DOMContentLoaded", function () {
-    // Get the toggle_header element and the header element
+    // Get the element with id 'toggle_header' and the <header> element from 3-main.html
     const toggleHeaderElement = this.document.querySelector("#toggle_header");
     const headerElement = document.querySelector("header");
 
-    // Event listener to toggle the class on click
+    // Add a click event listener to toggle the class on the <header> element
     toggleHeaderElement.addEventListener("click", function () {
-        // Check the current class and toggle it betwen red and green
+        // Toggle between 'red' and 'green' classes on the <header> element in 3-main.html
         if (headerElement.classList.contains("red")) {
             headerElement.classList.remove("red");
             headerElement.classList.add("green");

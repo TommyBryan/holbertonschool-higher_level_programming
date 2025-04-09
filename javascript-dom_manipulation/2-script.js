@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Get red_header element
+  // Get the element with id 'red_header' from 2-main.html
   const redHeaderElement = document.querySelector("#red_header");
 
   function elementAddClass() {
-    // Get header element and a class to it
+    // Add the 'red' class to the <header> element in 2-main.html
     document.querySelector("header").classList.add("red");
   }
 
-  // Add event listener to red_header element
+  // Add a click event listener to the 'red_header' element in 2-main.html
   redHeaderElement.addEventListener("click", elementAddClass);
 });
