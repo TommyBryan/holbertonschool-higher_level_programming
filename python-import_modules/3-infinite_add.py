@@ -2,5 +2,8 @@
 if __name__ == "__main__":
     import sys
 
-    total = sum(int(arg) for arg in sys.argv[1:]) # Sum all arguments
-    print(total) # Print the total
+    # Sum of command line arguments
+    total = sum(
+        int(arg) for arg in sys.argv[1:]
+    )
+    print(total)  # Print the total
