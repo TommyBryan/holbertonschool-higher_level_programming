@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 
 def print_matrix_integer(matrix=[[]]):
-
-    for row in matrix:  # Iterate through each row in the matrix
-        for i in range(len(row)):  # Iterate through each element in the row
-            if i != len(row) - 1:  # Check if the element is not the last in the row
-                # Print the element followed by a space (no newline)
+    """
+    Prints a matrix of integers.
+    Each row is printed on a new line, and elements in a row are separated
+    by a space. If the matrix is empty, it prints nothing.
+    """
+    for row in matrix:
+        for i in range(len(row)):
+            if i != len(row) - 1:
                 print("{:d}".format(row[i]), end=" ")
             else:
-                # Print the last element in the row without a trailing space
                 print("{:d}".format(row[i]), end="")
-        # Print a newline after each row
         print()
