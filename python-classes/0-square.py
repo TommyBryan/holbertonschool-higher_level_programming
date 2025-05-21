@@ -5,5 +5,4 @@
 class Square:
     """Passes an empty class. """
 
-
     pass
