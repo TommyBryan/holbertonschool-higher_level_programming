@@ -12,10 +12,9 @@ class Square:
         """ Checks if size is an integer. """
         if type(size) is not int:
             raise TypeError("size must be an integer")
-        """ Checks if size is negative. """
         if size < 0:
             raise ValueError("size must be >= 0")
 
-        def area(self):
-            """ Returns the area of the square. """
-            return
+    def area(self):
+        """ Returns the area of the square. """
+        return self.__size ** 2
