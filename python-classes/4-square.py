@@ -9,7 +9,13 @@ class Square:
         """ Initializes the square with a private size attribute."""
         self.__size = size
 
-        """ Checks if size is an integer. """
+        @property  # Property decorator
+        def size(self):
+            return self.__size
+
+        @size.setter  # Setter decorator
+        def size(self, value):
+            """ Checks if size is an integer. """
         if type(size) is not int:
             raise TypeError("size must be an integer")
         if size < 0:
