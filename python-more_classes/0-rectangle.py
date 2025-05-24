@@ -4,5 +4,5 @@
 
 class Rectangle:
     """ Passes an empty class """
-    
+
     pass
