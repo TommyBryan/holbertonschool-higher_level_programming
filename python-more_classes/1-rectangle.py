@@ -3,7 +3,8 @@
 
 
 class Rectangle:
-    
+    """ Initializes the rectangle with width and height """
+
     def __init__(self, width=0, height=0):
         """ Initializes the rectangle with width and height """
         self.width = width
@@ -13,7 +14,7 @@ class Rectangle:
     def width(self):
         """ Returns the width of the rectangle """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -26,7 +27,7 @@ class Rectangle:
     def height(self):
         """ Returns the height of the rectangle """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
