@@ -1,2 +1,5 @@
 *main_02_request.py
 .venv
+test.py
+__pycache__
+*csv
