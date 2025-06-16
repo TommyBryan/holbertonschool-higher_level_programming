@@ -6,8 +6,7 @@ from flask import request
 
 app = Flask(__name__)
 """ In-memory user data """
-users = {"jane": {"username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"}, "john": {"username": "john", "name": "John", "age": 30, "city": "New York"}}
-
+users = {}
 @app.route('/')
 def home():
     return str("Welcome to the Flask API!")
@@ -19,7 +18,7 @@ def get_username():
 
 @app.route('/status')
 def get_status():
-    return jsonify({"status": "OK"})
+    return "OK"
 
 @app.route('/users/<username>')
 def get_user(username):
