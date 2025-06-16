@@ -57,5 +57,3 @@ def run(server_class=HTTPServer, handler_class=APIHandler):
 
 if __name__ == "__main__":
     run(handler_class=APIHandler)
-
-
