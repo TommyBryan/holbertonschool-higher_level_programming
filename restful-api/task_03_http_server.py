@@ -42,7 +42,7 @@ class APIHandler(BaseHTTPRequestHandler):
             self.send_response(404)  # HTTP 404 Not Found
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
-            self.wfile.write(b"Endpoint Not Found")
+            self.wfile.write(b"Endpoint not found")
 
 
 def run(server_class=HTTPServer, handler_class=APIHandler):
