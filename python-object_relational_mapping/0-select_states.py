@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """
-List all states form the database hbtn_0e_0_usa.
+List all states from the database hbtn_0e_0_usa.
 Connects using MySQLdb and prints rows sorted by id.
 """
-
 
 import MySQLdb
 import sys
@@ -20,7 +19,7 @@ if __name__ == "__main__":
         port=3306,
         user=mysql_username,
         password=mysql_password,
-        db= database_name
+        db=database_name
     )
 
     # Create a cursor to execute queries
